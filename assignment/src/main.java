@@ -1,73 +1,55 @@
+import java.util.Scanner;
+
 public class main {
 
     public static void main(String[] args) {
-    
+       /*  rock = 1;
+           paper = 2;
+           scissors = 3; */
 
-        //Question 1
+        int randomNumber = (int)(Math.random()*4 +1);
 
-        int x = 5;
-        int y = 7;
-        System.out.println(((x*4) < (y + 15)) && x < y);
-        System.out.println(((5*4) < (7+15) && 5 < 7));
-        System.out.println((20 < 22) && 5 < 7);
-        System.out.println(true && true);
-        System.out.println(true);
-        System.out.println(" ");
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a number (1 for rock, 2 for paper, and 3 for scissors.) ");
+        int number = input.nextInt();
 
+        if (number == 1 && randomNumber == 1){
+            System.out.println("It's a draw, both are rock!");
 
+        }
 
-        //Question 2
+        else if(number == 1 && randomNumber == 2){
+            System.out.println("I chose paper. Paper beats rock! You lose!");
+        }
 
-        x = 10;
-        y = 20;
-        int z = 30;
-        System.out.println((( x == y) || (x < z)) && (x*2 + y)/5 > z);
-        System.out.println(( 5 == 7) || (5 < 7) && (10*2 + 20)/5 > 30);
-        System.out.println((5==7) || (5 < 7) && (8 > 30));
-        System.out.println( false || true && false);
-        System.out.println(false);
-        System.out.println(" ");
+        else if(number == 1 && randomNumber == 3){
+            System.out.println("I chose scissors. Rock beats scissors! You win!");
+        }
 
+        else if(number == 2 && randomNumber == 1){
+            System.out.println("I chose rock. Paper beats rock! You win!");
 
+        }
 
+        else if(number == 2 && randomNumber == 2) {
+            System.out.println("It's a draw, both are paper!");
+        }
+        else if (number == 2 && randomNumber == 3) {
+            System.out.println("I chose scissors. Scissors beats paper! You lose!");
+        }
 
-        //Question 3
+        else if (number == 3 && randomNumber == 1){
+            System.out.println("I chose rock. Rock beats scissors! You lose!");
+        }
 
-        boolean a = true;
-        boolean b = false;
-        System.out.println((a || b) && ((a == b) || a));
-        System.out.println((true || false) && (true == false) || true);
-        System.out.println(true && true);
-        System.out.println(true);
-        System.out.println(" ");
+        else if (number == 3 && randomNumber == 2){
+            System.out.println("I chose paper. Scissors beat paper. You win!");
+        }
 
-
-
-
-        //Question 4
-
-        a = false;
-        b = false;
-        x = 5;
-        y = 10;
-        System.out.println((a == b) && (x * 4) == (y % 6) * 5);
-        System.out.println((true) && (5 * 4) == (10 % 6) * 5);
-        System.out.println((true) && (20) == (4) * 5);
-        System.out.println((true) && (20 == 20));
-        System.out.println(true && true);
-        System.out.println(true); 
-        System.out.println(" ");
-
-
-
-        //Question 5
-
-        System.out.println((Math.abs(-2) == 2) || (Math.sqrt(Math.pow(9,2)) <= 9 && (-4 <= 4)));
-        System.out.println((2 == 2) || (9 <= 9) && (-4 <= 4));
-        System.out.println((true) || (true) || (true));
-        System.out.println(true);
-        System.out.println(" ");
-
+        else{
+            System.out.println("It's a draw, both are scissors!");
+        }
     }
+
 
 }
