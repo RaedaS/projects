@@ -1,50 +1,73 @@
 public class main {
 
-    //quadratic equation method
     public static void main(String[] args) {
-        //input your coefficients
-        double a = 1;
-        double b = 5;
-        double c = 6;
-        double constant = 0;
-        c = c - constant;
+    
 
-        //initialization
-        double answer1;
-        double answer2;
-        double squareRoot1;
-        double squareRoot2;
-        squareRoot1 = Math.sqrt((b*b) - (4*a*c));
-        answer1 = (-(b)) + squareRoot1;
-        answer1 = answer1 / (2*a);
+        //Question 1
 
-        //rounding to 2 dp
-        answer1 = Math.round(answer1 * 100);
-        answer1 = answer1 / 100;
+        int x = 5;
+        int y = 7;
+        System.out.println(((x*4) < (y + 15)) && x < y);
+        System.out.println(((5*4) < (7+15) && 5 < 7));
+        System.out.println((20 < 22) && 5 < 7);
+        System.out.println(true && true);
+        System.out.println(true);
+        System.out.println(" ");
 
-        System.out.println("x1 = " + answer1);
 
-        squareRoot2 = Math.sqrt((b*b) - (4*a*c));
-        answer2 = (-(b)) - squareRoot2 ;
-        answer2 = answer2 / (2*a);
 
-        //rounding to 2 dp
-        answer2 = Math.round(answer2 * 100);
-        answer2 = answer2 / 100;
+        //Question 2
+
+        x = 10;
+        y = 20;
+        int z = 30;
+        System.out.println((( x == y) || (x < z)) && (x*2 + y)/5 > z);
+        System.out.println(( 5 == 7) || (5 < 7) && (10*2 + 20)/5 > 30);
+        System.out.println((5==7) || (5 < 7) && (8 > 30));
+        System.out.println( false || true && false);
+        System.out.println(false);
+        System.out.println(" ");
+
+
+
+
+        //Question 3
+
+        boolean a = true;
+        boolean b = false;
+        System.out.println((a || b) && ((a == b) || a));
+        System.out.println((true || false) && (true == false) || true);
+        System.out.println(true && true);
+        System.out.println(true);
+        System.out.println(" ");
+
+
+
+
+        //Question 4
+
+        a = false;
+        b = false;
+        x = 5;
+        y = 10;
+        System.out.println((a == b) && (x * 4) == (y % 6) * 5);
+        System.out.println((true) && (5 * 4) == (10 % 6) * 5);
+        System.out.println((true) && (20) == (4) * 5);
+        System.out.println((true) && (20 == 20));
+        System.out.println(true && true);
+        System.out.println(true); 
+        System.out.println(" ");
+
+
+
+        //Question 5
+
+        System.out.println((Math.abs(-2) == 2) || (Math.sqrt(Math.pow(9,2)) <= 9 && (-4 <= 4)));
+        System.out.println((2 == 2) || (9 <= 9) && (-4 <= 4));
+        System.out.println((true) || (true) || (true));
+        System.out.println(true);
+        System.out.println(" ");
 
     }
 
-    //linear equation method
-    public static void linear(String[] args) {
-        int a = 3;
-        int b = -3;
-        int c = 3;
-
-        double answer;
-
-        answer = c - b;
-        answer = answer / a;
-
-        System.out.println("x = " + answer);
-    }
 }
