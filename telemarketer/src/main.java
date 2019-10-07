@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int array[] = new int[4];
@@ -10,20 +10,16 @@ public class main {
         }
 
 
-        if(array[0] == 8 || array[0] == 9){
-            System.out.println("ignore");
-        }
-        else if(array[3] == 8 || array[3] == 9){
-            System.out.println("ignore");
-        }
 
-        else if(array[1] == array[2]){
+
+        if((array[0] == 8 || array[0] == 9) && (array[3] == 8 || array[3] == 9) && (array[1] == array[2])){
             System.out.println("ignore");
         }
-
         else{
             System.out.println("answer");
         }
 
     }
 }
+
+//0000 (answer), 2222(answer), 9898(ignore), 8529(answer)
